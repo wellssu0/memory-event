@@ -1,0 +1,23 @@
+.drawerWrap{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 0 -20px 20px -10px rgba($color: #8d8d8d, $alpha: 0.1);
+  box-sizing: border-box;
+  min-height: 360px;
+  z-index: 1;
+  &.dark{
+    background-color: #1f1f1f;
+  }
+  &.hidden{
+    bottom: -100%;
+    opacity: 0;
+    .mask{
+      opacity: 0;
+    }
+  }
+}
