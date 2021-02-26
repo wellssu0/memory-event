@@ -26,6 +26,8 @@ const config = {
     '@/utils': path.resolve(__dirname, '..', 'src/utils'),
     '@/assets': path.resolve(__dirname, '..', 'src/assets'),
     '@/hooks': path.resolve(__dirname, '..', 'src/hooks'),
+    '@/constants': path.resolve(__dirname, '..', 'src/constants'),
+    '@/server': path.resolve(__dirname, '..', 'src/server'),
     '@/styles': path.resolve(__dirname, '..', 'src/styles'),
     '@/package': path.resolve(__dirname, '..', 'package.json'),
     '@/project': path.resolve(__dirname, '..', 'project.config.json'),

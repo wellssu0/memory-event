@@ -19,6 +19,8 @@
       "@/utils/*": ["./src/utils/*"],
       "@/assets/*": ["./src/assets/*"],
       "@/hooks/*": ["./src/hooks/*"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/server/*": ["./src/server/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/package": ["./package.json"],
       "@/project": ["./project.config.json"],
