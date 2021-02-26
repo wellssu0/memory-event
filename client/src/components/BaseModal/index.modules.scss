@@ -1,34 +1,38 @@
-@import './../../styles/mixin.scss';
+@import "./../../styles/mixin.scss";
 
-.baseModalWrap{
+.baseModalWrap {
   position: absolute;
   width: 80%;
   max-height: 70%;
   min-height: 20%;
   top: 50%;
   right: 50%;
-  transform: translate(50%,-50%);
+  transform: translate(50%, -50%);
   background: #fff;
   border-radius: 50px;
   box-shadow: 0 30px 60px 0 rgba($color: #000000, $alpha: 0.2);
-  &.dark{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  &.dark {
     background-color: #1f1f1f;
   }
-  .header{
+  .header {
     padding: 0 30px;
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .right{
+    .right {
       width: 30px;
       height: 30px;
     }
-    .title{
+    .title {
       max-width: 70%;
       @include ellipsis();
     }
-    .close{
+    .close {
       width: 30px;
       height: 30px;
       border-radius: 15px;
@@ -38,9 +42,32 @@
       background-color: $closeBtnBgColor;
     }
   }
-  .footer{
+  .content {
+    flex: 1;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  .footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 90px;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+    // padding: 0 50px;
+    button {
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      color: #666;
+      background-color: transparent;
+      display: inline-block;
+      &::after {
+        border: none;
+      }
+
+    }
+    .hover{
+      background-color: #999;
+    }
   }
 }

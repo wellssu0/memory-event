@@ -9,6 +9,7 @@ interface Props{
   zIndex?: number;
   onCloseModal?: () => void;
   onSubmitModal?: () => void;
+  children: React.ReactNode
 }
 const BaseModal: React.FC<Props> = ({
   display = false,
@@ -43,8 +44,8 @@ const BaseModal: React.FC<Props> = ({
         </View>
         <View className={styles.content}>{children}</View>
         <View className={styles.footer}>
-          <Button onClick={handleClose}>取消</Button>
-          <Button onClick={handleSubmit}>确定</Button>
+          <Button className={styles.cancel} hoverClass={styles.hover} onClick={handleClose}>取消</Button>
+          <Button className={styles.submit} hoverClass={styles.hover} onClick={handleSubmit}>确定</Button>
         </View>
       </View>
     </Mask>
