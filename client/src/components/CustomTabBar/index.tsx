@@ -2,10 +2,11 @@ import React from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import styles from './index.module.scss';
+import classnames from 'classnames';
 import BillSvg from '@/assets/tab-bar-icon/bill.svg';
 import RiliSvg from '@/assets/tab-bar-icon/rili.svg';
 import useSystemInfo from '@/hooks/useSystemInfo';
-import useTabBarConfig from '@/hooks/useTabBarConfig';
+import { BaseAnimationType } from '@/constants/index';
 
 const tabBarConfig = {
   light:{
@@ -41,33 +42,36 @@ export enum SelectedPage {
 interface Props{
   selectedIndex: SelectedPage;
   display: boolean;
+  animationType?: BaseAnimationType;
   onAddAction: () => void
 }
 const CustomTabBar:React.FC<Props> = ({
   display = true,
+  animationType = BaseAnimationType.SLIDE_DOWN,
   selectedIndex = SelectedPage.INDEX,
   onAddAction = () => {}
 }) => {
 
   const { theme, safeBottom } = useSystemInfo();
+
+  /** 点击添加 */
   const handleAddAction = () => {
     onAddAction();
   }
 
+  /** 切换tab页面 */
   const handleSwitchTabPage = (index: number):void => {
     if(index === selectedIndex) return;
     Taro.switchTab({
       url: tabBarConfig.list[index].pagePath
     })
   }
-  console.log('rerender custom tab bar');
-
 
   return(
     <View
       className={styles.customTabBarWrap}
       style={{
-        bottom: display ? 0 :'-100%',
+        transform: display ? '' : animationType,
         opacity: display ? 1 : 0,
         paddingBottom: safeBottom,
         backgroundColor: tabBarConfig[theme].wrapBgColor

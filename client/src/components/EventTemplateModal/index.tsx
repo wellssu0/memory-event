@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from '@tarojs/components';
 import BaseModal from '@/components/BaseModal';
 import styles from './index.modules.scss';
-import { FormType, EventCycleMode, CalendarType } from '@/constants/index';
+import { FormType, EventCycleMode, CalendarType, BaseAnimationType } from '@/constants/index';
 
 type Value = EventCycleMode | CalendarType | string;
 type TemplateConfig = Array<{
@@ -107,6 +107,7 @@ const EventTemplateModal: React.FC<Props> = ({
     <BaseModal
       display={display}
       zIndex={992}
+      animationType={BaseAnimationType.SLIDE_UP}
       modalTitle={mode === 'add' ? '新增事件模版' : '编辑事件模版'}
       onCloseModal={onCloseModal}
       onSubmitModal={handleSubmitModal}

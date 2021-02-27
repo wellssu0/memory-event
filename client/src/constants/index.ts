@@ -1,3 +1,11 @@
+export enum BaseAnimationType{
+  ZOOM_IN = 'scale(0)',
+  SLIDE_UP = 'translateY(-100%)',
+  SLIDE_DOWN = 'translateY(100%)',
+  SLIDE_RIGHT = 'translateX(-100%)',
+  SLIDE_LEFT = 'translateX(100%)',
+}
+
 
 export enum StorageKey{
   USER_INFO = 'user_info',

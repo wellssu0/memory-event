@@ -3,8 +3,7 @@ import { View } from '@tarojs/components';
 import classnames from 'classnames';
 import styles from './index.modules.scss';
 import useSystemInfo from '@/hooks/useSystemInfo';
-import Mask from '@/components/Mask'
-
+import Mask from '@/components/Mask';
 interface Props{
   display: boolean;
   onCloseDrawer: () => void;

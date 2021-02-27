@@ -41,14 +41,19 @@ const ActionTemplateDrawer: FC<Props> = ({
       display={display}
       onCloseDrawer={onCloseDrawer}
     >
-      <View className={styles.itemWrap} onClick={(e)=>handleItemWrapClick(e)}>
+      <View
+        className={styles.itemWrap}
+        onClick={(e)=>handleItemWrapClick(e)}
+      >
         {
           templateList.map(item => (<View className={styles.temp} onClick={(e)=>handleItemClick(e,item._id)}>{item.title}</View>))
         }
-        <View className={classnames(styles.temp,styles.addBtn)} onClick={(e)=>handleOpenAddTemplateModal(e)}>+</View>
-        {
-          templateList.length === 0 && <View className={styles.tips}> 👈 请先新增事件模版哦</View>
-        }
+
+        <View
+          className={classnames(styles.temp,styles.addBtn)}
+          onClick={(e)=>handleOpenAddTemplateModal(e)}
+        >+</View>
+        {templateList.length === 0 && <View className={styles.tips}> 👈 请先新增事件模版哦</View>}
       </View>
 
     </BottomDrawer>

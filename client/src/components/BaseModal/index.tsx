@@ -2,11 +2,13 @@ import React from 'react';
 import { ITouchEvent, View, Button } from '@tarojs/components';
 import styles from './index.modules.scss';
 import Mask from '@/components/Mask';
+import { BaseAnimationType } from '@/constants/index';
 
 interface Props{
   display: boolean;
   modalTitle?: string;
   zIndex?: number;
+  animationType?: BaseAnimationType;
   onCloseModal?: () => void;
   onSubmitModal?: () => void;
   children: React.ReactNode
@@ -15,6 +17,7 @@ const BaseModal: React.FC<Props> = ({
   display = false,
   modalTitle = '',
   zIndex = 900,
+  animationType = BaseAnimationType.SLIDE_DOWN,
   onCloseModal = () => {},
   onSubmitModal = () => {},
   children
@@ -34,9 +37,13 @@ const BaseModal: React.FC<Props> = ({
     <Mask
       zIndex={zIndex}
       display={display}
+      animationType={animationType}
       onClose={onCloseModal}
     >
-      <View className={styles.baseModalWrap} onClick={(e)=> handleModalWrapClick(e)}>
+      <View
+        className={styles.baseModalWrap}
+        onClick={(e)=> handleModalWrapClick(e)}
+      >
         <View className={styles.header}>
             <View className={styles.right}></View>
             <View className={styles.title}>{modalTitle}</View>
