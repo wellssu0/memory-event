@@ -1,0 +1,31 @@
+.formItemWrap {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 2px solid rgba($color: #464646, $alpha: 0.4);
+  transition: all 0.2s ease-in-out;
+  &.hidden{
+    transform: scale(0);
+    opacity: 0;
+    height: 0;
+  }
+  .itemTitle {
+    width: 100px;
+    font-size: 26px;
+  }
+  .radioWrap {
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    .optionWrap {
+      padding: 5px 15px;
+      border-radius: 14px;
+      margin-right: 20px;
+      &.active {
+        background-color: #81d3c6;
+        color: #fff;
+        // color: turquoise;
+      }
+    }
+  }
+}
