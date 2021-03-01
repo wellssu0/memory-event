@@ -69,7 +69,7 @@ const Calendar = {
       * @return Cn string
       */
     Animals:["\u9f20","\u725b","\u864e","\u5154","\u9f99","\u86c7","\u9a6c","\u7f8a","\u7334","\u9e21","\u72d7","\u732a"],
-    
+
     /**
      * 阳历节日
      */
@@ -119,7 +119,7 @@ const Calendar = {
     },
 
     /**
-     * 
+     *
      * @param {Object} 按照festival的格式输入数据，设置阳历节日
      */
     setFestival(param={}){
@@ -127,7 +127,7 @@ const Calendar = {
     },
 
     /**
-     * 
+     *
      * @param {Object} 按照lfestival的格式输入数据，设置农历节日
      */
     setLunarFestival(param={}){
@@ -601,11 +601,11 @@ const Calendar = {
       * @return JSON object
       * @eg:console.log(calendar.lunar2solar(1987,9,10));
       */
-    lunar2solar:function(y,m,d,isLeapMonth) {   //参数区间1900.1.31~2100.12.1
+    lunar2solar:function(y,m,d,isLeapMonth:boolean) {   //参数区间1900.1.31~2100.12.1
         y = parseInt(y)
         m = parseInt(m)
         d = parseInt(d)
-        var isLeapMonth = !!isLeapMonth;
+        // var isLeapMonth = !!isLeapMonth;
         var leapOffset  = 0;
         var leapMonth   = this.leapMonth(y);
         var leapDay     = this.leapDays(y);
