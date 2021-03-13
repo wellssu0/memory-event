@@ -1,3 +1,5 @@
+import { useGlobalIconFont } from './components/iconfont/helper';
+
 export default {
   pages: [
     "pages/index/index",
@@ -20,14 +22,15 @@ export default {
     list: [
       {
         pagePath: "pages/index/index",
-        text: "事件"
+        text: "event"
       },
       {
         pagePath: "pages/bill/index",
-        text: "账单"
+        text: "bill"
       }
     ]
   },
+  usingComponents: Object.assign(useGlobalIconFont()),
   darkmode: true,
   cloud: true,
   themeLocation: "theme.json"

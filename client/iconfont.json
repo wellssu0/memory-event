@@ -1,0 +1,10 @@
+{
+    "symbol_url": "http://at.alicdn.com/t/font_2383764_dhtrifzloib.js",
+    "save_dir": "./src/components/iconfont",
+    "use_typescript": true,
+    "platforms": ["weapp"],
+    "use_rpx": true,
+    "trim_icon_prefix": "icon",
+    "default_icon_size": 18,
+    "design_width": 750
+}

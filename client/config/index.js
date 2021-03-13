@@ -35,11 +35,6 @@ const config = {
   },
   sass: {
     resource: path.resolve(__dirname, '..', 'src/styles/_variable.scss')
-    // resource: [
-    //   'src/styles/variable.scss',
-    //   'src/styles/mixin.scss',
-    // ],
-    // projectDirectory: path.resolve(__dirname, '..')
   },
   weapp: {
     module: {
