@@ -22,6 +22,7 @@
       "@/constants/*": ["./src/constants/*"],
       "@/server/*": ["./src/server/*"],
       "@/styles/*": ["./src/styles/*"],
+      "@/store/*": ["./src/store/*"],
       "@/package": ["./package.json"],
       "@/project": ["./project.config.json"],
     },
